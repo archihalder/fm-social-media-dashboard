@@ -1,0 +1,14 @@
+// converts pixels to rem
+@function rem($pixels, $context: 16) {
+  @return math.div($pixels, $context) * 1rem;
+}
+
+/*
+Usage - 
+
+h1 {
+    font-size: rem(30);
+}
+
+now font-size becomes from 30px to 1.875rem
+*/
