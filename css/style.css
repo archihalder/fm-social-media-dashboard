@@ -6,9 +6,20 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+  margin: 0 auto;
   max-width: 1100px;
-  margin: auto;
+  padding: 0 2rem;
   background-color: var(--dark-bg);
+}
+
+.top-bar {
+  height: 14rem;
+  background-color: var(--dark-top-bg);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* dashboard title */
@@ -22,20 +33,27 @@ h1 {
   font-size: small;
 }
 
-nav p {
-  color: var(--dark-text1);
-  font-weight: bold;
+.line {
+  height: 0;
+  z-index: -2;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.nav p {
+  color: var(--dark-text1);
+  font-weight: bold;
 }
 
 .dm-toggle {
   margin: auto 0;
   display: flex;
   justify-content: space-around;
+  font-size: small;
 }
 
 /* dark mode toggle switch */
@@ -55,14 +73,14 @@ nav {
 }
 
 .toggle-switch input[type="checkbox"]:checked + label::after {
-  left: calc(100% - 4px);
+  left: calc(100% - 3px);
   transform: translateX(-100%);
 }
 
 .toggle-switch label {
   cursor: pointer;
-  width: 48px;
-  height: 24px;
+  width: 45px;
+  height: 22px;
   background: linear-gradient(var(--toggle-dark-start), var(--toggle-dark-end));
   display: block;
   border-radius: 24px;
@@ -72,10 +90,10 @@ nav {
 .toggle-switch label::after {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 2.5px;
   left: 3px;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 18px;
   background: var(--dark-top-bg);
   border-radius: 16px;
   transition: 0.3s;
@@ -86,27 +104,158 @@ nav {
 .big-cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .card {
     background-color: var(--dark-card-bg);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    gap: 1rem;
+    border-radius: 5px;
+  }
+  
+.facebook {
+  border-top: 3px solid var(--facebook);
+}
+
+.twitter {
+  border-top: 3px solid var(--twitter);
+}
+.instagram {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-image: linear-gradient(90deg, var(--instagram-start), var(--instagram-end));
+  border-image-slice: 50;
+}
+
+.youtube {
+  border-top: 3px solid var(--youtube);
 }
 
 .username {
     color: var(--dark-text1);
     font-size: small;
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    margin-top: 1rem;
 }
 
-.username img {
-    width: 25px;
-    height: 25px;
+.social-icons {
+    width: 20px;
+    height: 20px;
     margin: auto 0;
+}
+
+.follower-count {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--dark-text2);
+  margin-bottom: 0;
+}
+
+.follower-text {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.7rem;
+  color: var(--dark-text1);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.metric {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--limegreen);
+}
+
+.metric img {
+  height: 5px;
+  width: 7px;
+  margin: auto 0;
+}
+
+.metric p {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.down {
+  color: var(--brightred);
+}
+
+/* bottom half */
+
+h2 {
+  color: var(--dark-text2);
+  margin-top: 2.5rem;
+}
+
+.small-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  column-gap: 1.5rem;
+}
+
+.small-card {
+  background-color: var(--dark-card-bg);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 20px;
+  padding-top: 25px;
+  border-radius: 5px;
+}
+
+.card-title {
+  color: var(--dark-text1);
+  font-weight: bold;
+  font-size: small;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.card-count {
+  color: var(--dark-text2);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-count p {
+  margin-bottom: 0;
+}
+
+.card-rate {
+  font-size: smaller;
+  font-weight: bold;
+  color: var(--limegreen);
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.card-rate img {
+  height: 5px;
+  width: 7px;
+  margin: 5px;
+  margin-bottom: 7px;
+}
+
+.card-rate p {
+  margin-bottom: 2px;
+}
+
+/* Attributions */
+
+.attribution {
+  font-size: small;
+  text-align: center;
+  color: var(--dark-text1);
+  margin-top: 3rem;
 }
