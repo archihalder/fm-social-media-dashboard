@@ -1,0 +1,51 @@
+@import "global.css";
+@import "style.css";
+
+@media (680px <= width <= 800px) {
+    body {
+        max-width: 800px;
+    }
+
+    .big-cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .small-card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width <= 680px) {
+    body {
+        max-width: 375px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line {
+        z-index: 0;
+        width: 100%;
+        border: 1px solid var(--light-text1);
+    }
+
+    .dm-toggle {
+        justify-content: space-between;
+    }
+
+    .big-cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .small-card-container {
+        grid-template-columns: 1fr;
+    }
+}

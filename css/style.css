@@ -257,5 +257,5 @@ h2 {
   font-size: small;
   text-align: center;
   color: var(--dark-text1);
-  margin-top: 3rem;
+  margin: 3rem auto;
 }
