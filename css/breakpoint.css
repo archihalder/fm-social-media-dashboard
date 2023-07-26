@@ -1,7 +1,7 @@
 @import "global.css";
 @import "style.css";
 
-@media (680px <= width <= 800px) {
+@media (500px <= width <= 800px) {
     body {
         max-width: 800px;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (width <= 680px) {
+@media (width <= 500px) {
     body {
         max-width: 375px;
     }

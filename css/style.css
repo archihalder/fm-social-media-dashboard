@@ -69,12 +69,13 @@ h1 {
 }
 
 .toggle-switch input[type="checkbox"]:checked + label {
-  background: gray;
+  background: var(--dark-text1); /* circle container */
 }
 
 .toggle-switch input[type="checkbox"]:checked + label::after {
   left: calc(100% - 3px);
   transform: translateX(-100%);
+  background-color: var(--light-top-bg); /* cicle */
 }
 
 .toggle-switch label {
@@ -90,10 +91,10 @@ h1 {
 .toggle-switch label::after {
   content: "";
   position: absolute;
-  top: 2.5px;
-  left: 3px;
-  width: 17px;
-  height: 18px;
+  top: 3px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
   background: var(--dark-top-bg);
   border-radius: 16px;
   transition: 0.3s;
@@ -107,7 +108,7 @@ h1 {
     gap: 1.5rem;
 }
 
-.card {
+.big {
     background-color: var(--dark-card-bg);
     display: flex;
     flex-direction: column;
@@ -116,21 +117,21 @@ h1 {
   }
   
 .facebook {
-  border-top: 3px solid var(--facebook);
+  border-top: 4px solid var(--facebook);
 }
 
 .twitter {
-  border-top: 3px solid var(--twitter);
+  border-top: 4px solid var(--twitter);
 }
 .instagram {
-  border-top-width: 3px;
+  border-top-width: 4px;
   border-top-style: solid;
   border-image: linear-gradient(90deg, var(--instagram-start), var(--instagram-end));
   border-image-slice: 50;
 }
 
 .youtube {
-  border-top: 3px solid var(--youtube);
+  border-top: 4px solid var(--youtube);
 }
 
 .username {
@@ -201,7 +202,7 @@ h2 {
   column-gap: 1.5rem;
 }
 
-.small-card {
+.small {
   background-color: var(--dark-card-bg);
   display: grid;
   grid-template-columns: 3fr 1fr;
