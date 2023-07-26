@@ -1,34 +1,4 @@
-:root {
-  /* primary colors */
-  --limegreen: hsl(163, 72%, 41%);
-  --brightred: hsl(356, 69%, 56%);
-  --facebook: hsl(208, 92%, 53%);
-  --twitter: hsl(203, 89%, 53%);
-  --instagram-start: hsl(37, 97%, 70%);
-  --instagram-end: hsl(329, 70%, 58%);
-  --youtube: hsl(348, 97%, 39%);
-
-  /* dark toggle colors */
-  --toggle-dark-start: hsl(210, 78%, 56%);
-  --toggle-dark-end: hsl(146, 68%, 55%);
-
-  /* light toggle colors */
-  --toggle-light: hsl(230, 22%, 74%);
-
-  /* dark theme */
-  --dark-bg: hsl(230, 17%, 14%);
-  --dark-top-bg: hsl(232, 19%, 15%);
-  --dark-card-bg: hsl(228, 28%, 20%);
-  --dark-text1: hsl(228, 34%, 66%);
-  --dark-text2: hsl(0, 0%, 100%);
-
-  /* light theme */
-  --light-bg: hsl(0, 0%, 100%);
-  --light-top-bg: hsl(225, 100%, 98%);
-  --light-card-bg: hsl(227, 47%, 96%);
-  --light-text1: hsl(228, 12%, 44%);
-  --light-text2: hsl(230, 17%, 14%);
-}
+@import "global.css";
 
 html {
   box-sizing: border-box;
@@ -288,53 +258,4 @@ h2 {
   text-align: center;
   color: var(--dark-text1);
   margin: 3rem auto;
-}
-
-@media (680px <= width <= 800px) {
-  body {
-      max-width: 800px;
-  }
-
-  .big-cards-container {
-      grid-template-columns: 1fr 1fr;
-  }
-
-  .small-card-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (width <= 680px) {
-  body {
-      max-width: 375px;
-  }
-
-  h1 {
-      font-size: 1.5rem;
-  }
-
-  .nav {
-      display: flex;
-      flex-direction: column;
-  }
-
-  .line {
-      z-index: 0;
-      width: 100%;
-      border: 1px solid var(--light-text1);
-  }
-
-  .dm-toggle {
-      justify-content: space-between;
-  }
-
-  .big-cards-container {
-      display: grid;
-      grid-template-columns: 1fr;
-  }
-
-  .small-card-container {
-      grid-template-columns: 1fr;
-  }
 }
