@@ -55,7 +55,6 @@ toggleSwitch.addEventListener("change", function () {
         cardTitle.forEach((cardTitle) => {
             cardTitle.style.color = text1Light;
         });
-
     }
     else {
         // Switch is toggled OFF -> Dark Mode ON
@@ -82,4 +81,21 @@ toggleSwitch.addEventListener("change", function () {
             cardTitle.style.color = text1Dark;
         });
     }
+});
+
+socialCard.forEach((socialCard) => {
+    socialCard.addEventListener("mouseenter", function () {
+        if (toggleSwitch.checked) {
+            this.style.backgroundColor = toggleLight;
+        } else {
+            this.style.backgroundColor = text1Light;
+        }
+    });
+    socialCard.addEventListener("mouseleave", function () {
+        if (toggleSwitch.checked) {
+            this.style.backgroundColor = cardLight;
+        } else {
+            this.style.backgroundColor = cardDark;
+        }
+    });
 });
