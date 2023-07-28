@@ -29,6 +29,7 @@ const socialCard = document.querySelectorAll(".card");
 const socialNumeric = document.querySelectorAll(".num");
 const followerText = document.querySelectorAll(".follower-text");
 const cardTitle = document.querySelectorAll(".card-title");
+const username = document.querySelectorAll(".username");
 
 toggleSwitch.addEventListener("change", function () {
     if (toggleSwitch.checked) {
@@ -55,6 +56,10 @@ toggleSwitch.addEventListener("change", function () {
         cardTitle.forEach((cardTitle) => {
             cardTitle.style.color = text1Light;
         });
+
+        username.forEach((username) => {
+            username.style.color = text1Light;
+        });
     }
     else {
         // Switch is toggled OFF -> Dark Mode ON
@@ -80,22 +85,27 @@ toggleSwitch.addEventListener("change", function () {
         cardTitle.forEach((cardTitle) => {
             cardTitle.style.color = text1Dark;
         });
+
+        username.forEach((username) => {
+            username.style.color = text1Dark;
+        });
     }
 });
 
+// for mouse over
 socialCard.forEach((socialCard) => {
     socialCard.addEventListener("mouseenter", function () {
         if (toggleSwitch.checked) {
-            this.style.backgroundColor = toggleLight;
+            this.style.backgroundColor = toggleLight; // mouse on, light mode
         } else {
-            this.style.backgroundColor = text1Light;
+            this.style.backgroundColor = text1Light; // mouse on, dark mode
         }
     });
     socialCard.addEventListener("mouseleave", function () {
         if (toggleSwitch.checked) {
-            this.style.backgroundColor = cardLight;
+            this.style.backgroundColor = cardLight; // mouse off, light mode
         } else {
-            this.style.backgroundColor = cardDark;
+            this.style.backgroundColor = cardDark; // mouse off, dark mode
         }
     });
 });
