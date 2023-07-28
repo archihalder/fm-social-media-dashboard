@@ -72,6 +72,10 @@ h1 {
   background: var(--dark-text1); /* circle container */
 }
 
+.toggle-switch input[type="checkbox"]:checked + label:hover {
+  background: linear-gradient(var(--toggle-dark-start), var(--toggle-dark-end));
+}
+
 .toggle-switch input[type="checkbox"]:checked + label::after {
   left: calc(100% - 3px);
   transform: translateX(-100%);
@@ -123,6 +127,7 @@ h1 {
 .twitter {
   border-top: 4px solid var(--twitter);
 }
+
 .instagram {
   border-top-width: 4px;
   border-top-style: solid;
