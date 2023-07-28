@@ -68,18 +68,20 @@ h1 {
   visibility: hidden;
 }
 
-.toggle-switch input[type="checkbox"]:checked + label {
-  background: var(--dark-text1); /* circle container */
+.toggle-switch input[type="checkbox"]:checked+label {
+  background: var(--dark-text1);
+  /* circle container */
 }
 
-.toggle-switch input[type="checkbox"]:checked + label:hover {
+.toggle-switch input[type="checkbox"]:checked+label:hover {
   background: linear-gradient(var(--toggle-dark-start), var(--toggle-dark-end));
 }
 
-.toggle-switch input[type="checkbox"]:checked + label::after {
+.toggle-switch input[type="checkbox"]:checked+label::after {
   left: calc(100% - 3px);
   transform: translateX(-100%);
-  background-color: var(--light-top-bg); /* cicle */
+  background-color: var(--light-top-bg);
+  /* cicle */
 }
 
 .toggle-switch label {
@@ -107,19 +109,23 @@ h1 {
 /* big cards */
 
 .big-cards-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  cursor: pointer;
 }
 
 .big {
-    background-color: var(--dark-card-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 5px;
-  }
-  
+  background-color: var(--dark-card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
 .facebook {
   border-top: 4px solid var(--facebook);
 }
@@ -140,17 +146,17 @@ h1 {
 }
 
 .username {
-    color: var(--dark-text1);
-    font-size: small;
-    display: flex;
-    gap: 5px;
-    margin-top: 1rem;
+  color: var(--dark-text1);
+  font-size: small;
+  display: flex;
+  gap: 5px;
+  margin-top: 1rem;
 }
 
 .social-icons {
-    width: 20px;
-    height: 20px;
-    margin: auto 0;
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
 }
 
 .follower-count {
